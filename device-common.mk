@@ -19,15 +19,10 @@
 #
 # Everything in this directory will become public
 
-ifeq ($(CM_BUILD),)
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/asus/flo-kernel/kernel
+TARGET_PREBUILT_KERNEL := device/asus/flo-kernel/kernel
 else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES := \
-	$(LOCAL_KERNEL):kernel
+TARGET_PREBUILT_KERNEL := device/asus/flo/kernel
 endif
 
 # This device is xhdpi.  However the platform doesn't
