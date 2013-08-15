@@ -19,12 +19,6 @@
 #
 # Everything in this directory will become public
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_PREBUILT_KERNEL := device/asus/flo-kernel/kernel
-else
-TARGET_PREBUILT_KERNEL := device/asus/flo/kernel
-endif
-
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
 # we do this little trick to fall back to the hdpi version
@@ -262,6 +256,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hwui.text_small_cache_height=1024 \
 	ro.hwui.text_large_cache_width=2048 \
 	ro.hwui.text_large_cache_height=1024
+
+# Hardware codecs
+PRODUCT_PROPERTY_OVERRIDES += \
+    qcom.hw.aac.encoder=true
+
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc
 
 # NFC packages
 PRODUCT_PACKAGES += \

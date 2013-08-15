@@ -13,10 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product, device/asus/flo/aosp_flo.mk)
 
-PRODUCT_RESTRICT_VENDOR_FILES := false
+PRODUCT_NAME := full_flo
 
-$(call inherit-product, device/asus/flo/device.mk)
 $(call inherit-product-if-exists, vendor/asus/flo/flo-vendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
-
