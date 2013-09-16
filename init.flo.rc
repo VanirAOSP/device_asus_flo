@@ -24,6 +24,7 @@ on init
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage/emulated 0555 root root
+    mkdir /storage/emulated/legacy 0555 root root
 
     # USB storage
     mkdir /storage/usbdisk0 0000 system system
