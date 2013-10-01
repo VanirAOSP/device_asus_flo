@@ -24,7 +24,6 @@ on init
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage/emulated 0555 root root
-    mkdir /storage/emulated/legacy 0555 root root
 
     # USB storage
     mkdir /storage/usbdisk0 0000 system system
@@ -432,6 +431,16 @@ service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
     oneshot
 
 service iprenew_bt-pan /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
+
+service dhcpcd_eth0 /system/bin/dhcpcd -ABDKL
+    class main
+    disabled
+    oneshot
+
+service iprenew_eth0 /system/bin/dhcpcd -n
     class main
     disabled
     oneshot

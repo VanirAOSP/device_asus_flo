@@ -125,7 +125,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
 # Webkit
-ENABLE_WEBGL := false
-TARGET_FORCE_CPU_UPLOAD := false
+ENABLE_WEBGL := true
+TARGET_FORCE_CPU_UPLOAD := true
 
 -include vendor/asus/flo/BoardConfigVendor.mk
