@@ -19,7 +19,7 @@ ifeq ($(call is-board-platform-in-list,msm8974 msm8226),true)
     LOCAL_CFLAGS += -DVENUS_PRESENT
 endif
 
-LOCAL_CFLAGS += -D_ANDROID_
+LOCAL_CFLAGS += -Wno-error=strict-aliasing -D_ANDROID_
 LOCAL_COPY_HEADERS_TO := mm-camera-interface
 LOCAL_COPY_HEADERS += ../common/cam_intf.h
 LOCAL_COPY_HEADERS += ../common/cam_types.h
@@ -30,7 +30,7 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_C_INCLUDES += hardware/qcom/media/mm-core/inc
 
-LOCAL_CFLAGS += -Wall -Werror
+#LOCAL_CFLAGS += -Wall -Werror
 
 LOCAL_SRC_FILES := $(MM_CAM_FILES)
 
