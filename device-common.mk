@@ -20,15 +20,13 @@
 # Everything in this directory will become public
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-FLO_LOCAL_KERNEL := kernel/google/msm
-$(FLO_LOCAL_KERNEL): android_kernel
-	cp -f $(PRODUCT_OUT)/obj/kernel/arch/arm/boot/zImage $(FLO_LOCAL_KERNEL)
+  LOCAL_KERNEL := kernel/google/msm
 else
-FLO_LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+  LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 PRODUCT_COPY_FILES := \
-	$(FLO_LOCAL_KERNEL):kernel
+	$(LOCAL_KERNEL):kernel
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
