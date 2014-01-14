@@ -49,8 +49,8 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
 # Try to build the kernel
 TARGET_KERNEL_SOURCE := kernel/google/msm
-TARGET_KERNEL_CONFIG := flo_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
+TARGET_KERNEL_CONFIG := cyanogen_flo_defconfig
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
