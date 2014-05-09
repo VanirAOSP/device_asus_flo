@@ -135,7 +135,4 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
-# Workaround for broken video recording when compiling thumb with -Os on FLO and HH
-AN_ASSHAT_HAS_BROKEN_MY_CAMERA_SOURCE := true
-
 -include vendor/asus/flo/BoardConfigVendor.mk
