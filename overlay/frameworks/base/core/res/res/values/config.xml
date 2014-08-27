@@ -18,6 +18,8 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<dimen name="config_viewConfigurationTouchSlop">5dp</dimen>
+
 
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
