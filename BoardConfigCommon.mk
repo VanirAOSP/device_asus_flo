@@ -137,6 +137,7 @@ BOARD_SEPOLICY_UNION += \
         property.te \
         property_contexts \
         qmux.te \
+        radio.te \
         rild.te \
         rmt.te \
         sensors.te \
