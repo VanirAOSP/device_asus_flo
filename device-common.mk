@@ -161,8 +161,7 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-	e2fsck \
-	setup_fs
+	e2fsck
 
 PRODUCT_PACKAGES += \
 	libgenlock \
@@ -311,6 +310,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     device/asus/flo/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     device/asus/flo/nfc/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf
+
+# http://b/15193147
+# TODO(danalbert): Remove this once stlport is dead and gone.
+PRODUCT_PACKAGES +=  libstlport
 
 PRODUCT_LOCALES := en_US es_US de_DE zh_CN
 
